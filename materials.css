@@ -22,7 +22,7 @@
 	position:relative;
 	top:1px;
 }
-.btn {
+.btnpink {
 	box-shadow:inset 0px 1px 0px 0px #fbafe3;
 	background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
 	background-color:#ff5bb0;
@@ -74,4 +74,38 @@
 .shape-ex1:hover{
     background-color: #000;
     color: #fff;
+}
+.shape-ex4{
+    width: 150px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    line-height: 40px;
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #000;
+    position: relative;
+    transition: all .3s linear;
+}
+.shape-ex4 > p{
+    position: relative;
+    z-index: 1;
+}
+.shape-ex4::before{
+    content: "";
+    width: 0%;
+    height: 100%;
+    display: block;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all .3s ease;
+}
+.shape-ex4:hover{
+    color: #fff;
+}
+.shape-ex4:hover::before{
+    width: 100%;
 }
