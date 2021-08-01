@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above three-line code must be placed on it -->
-  <title>幸運豬骰子遊戲</title>
+  <title>Pig-Game</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -39,11 +39,11 @@
 
   <div class="container" style="background-color:rgba(245, 245, 245, 0.767);">
     <div class="row text-center text-shadow">
-      幸運豬骰子遊戲
+      Pig-Game
     </div>
     <div class="row h2 text-center">目標分數：200</div>
 
-
+    <!-- 勝利場數 -->
     <div class="row h3">
 
       <div class="col-md-6 text-center text-shadowblack" style="font-size:30px;">勝利場數：<span
@@ -55,26 +55,54 @@
 
     </div>
 
-
-    <div class="row playerID text-center rounded"
+    <!-- 玩家名稱 -->
+    <div class="row text-center rounded playerID "
       style="background-color:rgba(218, 63, 158, 0.993); color:rgba(255, 248, 220, 0.884);border-radius: 25px; ">
       <div class="col-md-6 h3 player1" style="height:25px;">玩家1</div>
       <div class="col-md-6 h3 player2" style="height:25px;">玩家2</div>
     </div>
     <div class="row h2 text-center" style="height: 30px;">
-      Score
+      總分
     </div>
-    <div class="row displayScore" style="height: 12rem;">
-      <div class="col-md-6 scorePlayer1" style="height:100%"></div>
-      <div class="col-md-6 scorePlayer2" style="height:100%"></div>
+
+
+    <!-- 總分數 -->
+    <div class="row displayScore text-center" style="height: 12rem; 
+      ">
+      <span class="col-md-4 text-shadowblack scorePlayer1" style="height:12rem;line-height:12rem;">0</span>
+      <span class="col-md-4 col-md-offset-4 text-shadowblack scorePlayer2"
+        style="height:12rem;line-height:12rem;">0</span>
     </div>
-    <div class="row" style="height:20rem;">
+
+    <!-- 三按鈕 -->
+    <div class=" row">
 
       <button class="btn hold" style="position: absolute;left:15%;">Hold！</button>
-      <button class="btn roll" style="position: relative;left:50%;transform: translate(-50%,-50%);">🎲 Roll the
-        dice</button>
+      <button class="btn roll" style="position: relative;left:50%;transform: translate(-50%,-50%);">🎲
+        擲出骰子</button>
       <button class="btn hold" style="position: absolute;right:15%;">Hold！</button>
+    </div>
 
+
+    <!-- 擲骰子畫面、當回合分數顯示 -->
+    <div class="row text-center" style="height: 150px;">
+      <div class="col-md-4 box-shadow">當回合分數
+
+        <div class="h3 curScore2">0</div>
+      </div>
+
+
+
+      <div class="col-md-4 box-shadow"><img class="dice" src="dice-1.png" style="width: 30%;"></div>
+
+
+
+
+
+      <div class="col-md-4 box-shadow">當回合分數
+
+        <div class="h3 curScore1">0</div>
+      </div>
     </div>
 
 

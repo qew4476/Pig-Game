@@ -11,8 +11,8 @@ body{
 
 }
 
-
 /* 
+
 .container{
     border:1px solid;
     
@@ -26,5 +26,16 @@ body{
 .row div{
 
     border:1px solid;
+} */
+
+
+.box-shadow {
+	background: #dfd2d2;
+	color: #000;
+	text-align: center;	
+	height: 90px;
+	display: inline-block;
+	box-shadow: #A3A3A3 5px 5px 2px 0px;
+    border-radius: 25px;
+    top:10px;
 }
- */
