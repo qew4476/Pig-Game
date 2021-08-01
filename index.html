@@ -37,7 +37,13 @@
 
 
 
+
+
   <div class="container" style="background-color:rgba(245, 245, 245, 0.767);">
+    <!-- 重新開始按鈕 -->
+    <button class="shape-ex1" style="position: absolute;">重新開始</button>
+
+
     <div class="row text-center text-shadow">
       Pig-Game
     </div>
@@ -46,10 +52,10 @@
     <!-- 勝利場數 -->
     <div class="row h3">
 
-      <div class="col-md-6 text-center text-shadowblack" style="font-size:30px;">勝利場數：<span
-          class="winnums player1">0</span></div>
-      <div class="col-md-6 text-center text-shadowblack" style="font-size: 30px;">勝利場數：<span
-          class="winnums player2">0</span></div>
+      <div class="col-md-6 text-center text-shadowblack" style="font-size:30px;">勝利場數：<span class="winplayer1">0</span>
+      </div>
+      <div class="col-md-6 text-center text-shadowblack" style="font-size: 30px;">勝利場數：<span class="winplayer2">0</span>
+      </div>
 
 
 
@@ -74,50 +80,70 @@
         style="height:12rem;line-height:12rem;">0</span>
     </div>
 
-    <!-- 三按鈕 -->
-    <div class=" row">
 
-      <button class="btn hold" style="position: absolute;left:15%;">Hold！</button>
-      <button class="btn roll" style="position: relative;left:50%;transform: translate(-50%,-50%);">🎲
-        擲出骰子</button>
-      <button class="btn hold" style="position: absolute;right:15%;">Hold！</button>
-    </div>
+    <!-- 三個按鈕 -->
+    <div class="row">
+      <center>
+
+        <div class="col-md-4"><button class="btn hold">Hold!</button></div>
+
+      </center>
+
+      <center>
+        <div class="col-md-4"> <button class="btn roll">🎲 擲出骰子</button></div>
+      </center>
+
+      <div class="col-md-4">
+
+        <center><button class="btn hold">
 
 
-    <!-- 擲骰子畫面、當回合分數顯示 -->
-    <div class="row text-center" style="height: 150px;">
-      <div class="col-md-4 box-shadow">當回合分數
 
-        <div class="h3 curScore2">0</div>
+            Hold！</button></center>
+
+
+
+
+      </div>
+
+
+      <!-- 擲骰子畫面、當回合分數顯示 -->
+      <div class="row text-center" style="height: 200px;">
+
+
+
+        <div class="col-md-4 box-shadow" style="font-weight: bold; font-size: large;">
+          <div>當回合分數</div>
+
+          <div class="h3 curScore2">0</div>
+        </div>
+
+
+        <div class="col-md-4 box-shadow"><img class="dice" src="dice-1.png" style="width: 30%;"></div>
+
+
+
+
+
+        <div class="col-md-4 box-shadow" style="font-weight: bold; font-size: large">當回合分數
+
+          <div class="h3 curScore1">0</div>
+        </div>
       </div>
 
 
 
-      <div class="col-md-4 box-shadow"><img class="dice" src="dice-1.png" style="width: 30%;"></div>
 
 
 
 
 
-      <div class="col-md-4 box-shadow">當回合分數
 
-        <div class="h3 curScore1">0</div>
-      </div>
+
+      <center>
+        <p>create by <a href="https://github.com/qew4476">@State-yang</a></p>
+      </center>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
 </body>
 
 </html>
