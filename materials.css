@@ -1,0 +1,55 @@
+.button {
+	box-shadow:inset 0px 1px 0px 0px #fbafe3;
+	background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+	background-color:#ff5bb0;
+	border-radius:6px;
+	border:1px solid #ee1eb5;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #c70067;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+	background-color:#ef027d;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+.btn {
+	box-shadow:inset 0px 1px 0px 0px #fbafe3;
+	background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+	background-color:#ff5bb0;
+	border-radius:6px;
+	border:1px solid #ee1eb5;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #c70067;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+	background-color:#ef027d;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+ 
+ 
+.generatecssdotcom_3d { position: absolute;top: 0;right: 0;font-size:8px;color: #cccccc;}
+.generatecssdotcom_3d a {color: #cccccc; text - decoration:none; font - weight:normal; }
+.generatecssdotcom_3d a:hover {color: #cccccc; text - decoration:none; font - weight:normal; }
+#generatecssdotcom_text {font-size: 51px;font-family: Georgia;color: #ff4040;text-shadow:0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15); text-align:center; line-height:250px;}
