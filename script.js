@@ -47,6 +47,7 @@ btnRoll.addEventListener('click', function () {
 
     // if (!btnHoldArr[restPlayer].contains('disabled'))
     btnHoldArr[restPlayer].classList.add('disabled');
+    btnHoldArr[activePlayer].classList.remove('disabled');
 
 
 
