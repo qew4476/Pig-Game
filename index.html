@@ -47,7 +47,7 @@
 
 
     <!-- 重新開始按鈕 -->
-    <button class=" shape-ex1" style="position: absolute;">重新開始</button>
+    <button id="btn--restart" class=" shape-ex1" style="position: absolute;">重新開始</button>
 
 
     <!-- 教學說明Modal -->
@@ -67,6 +67,9 @@
               hereModal body text goes hereModal body text goes hereModal body text goes hereModal body text goes
               hereModal body text goes hereModal body text goes hereModal body text goes hereModal body text goes
               hereModal body text goes here.</p>
+            <center>
+              <p style="margin-top: 50p;">create by <a href="https://github.com/qew4476">@State-yang</a></p>
+            </center>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉 </button>
@@ -85,15 +88,15 @@
     </div>
 
     <center>
-      <div class=" row h2 text-center">目標分數：200
+      <div class=" row h2 text-center">目標分數：100
       </div>
     </center>
     <!-- 勝利場數 -->
     <div class="row h3">
 
-      <div class="col-md-6 text-center text-shadowblack" style="font-size:30px;">勝利場數：<span class="winplayer1">0</span>
+      <div class="col-md-6 text-center text-shadowblack" style="font-size:30px;">勝利場數：<span id="win--0">0</span>
       </div>
-      <div class="col-md-6 text-center text-shadowblack" style="font-size: 30px;">勝利場數：<span class="winplayer2">0</span>
+      <div class="col-md-6 text-center text-shadowblack" style="font-size: 30px;">勝利場數：<span id="win--1">0</span>
       </div>
 
 
@@ -103,8 +106,8 @@
     <!-- 玩家名稱 -->
     <div class="row text-center rounded playerID "
       style="background-color:rgba(218, 63, 158, 0.993); color:rgba(255, 248, 220, 0.884);border-radius: 25px; ">
-      <div class="col-md-6 h3 player1" style="height:25px;">玩家1</div>
-      <div class="col-md-6 h3 player2" style="height:25px;">玩家2</div>
+      <div class="col-md-6 h3 player1" id="name--0" style="height:25px;">玩家1</div>
+      <div class="col-md-6 h3 player2" id="name--1" style="height:25px;">玩家2</div>
     </div>
     <div class="row h2 text-center" style="height: 30px;">
       總分
@@ -114,9 +117,10 @@
     <!-- 總分數 -->
     <div class="row displayScore text-center" style="height: 12rem; 
       ">
-      <span class="col-md-4 text-shadowblack scorePlayer1" style="height:12rem;line-height:12rem;">0</span>
-      <span class="col-md-4 col-md-offset-4 text-shadowblack scorePlayer2"
-        style="height:12rem;line-height:12rem;">0</span>
+      <span id="score--0" class="col-md-4 text-shadowblack scorePlayer1"
+        style="height:12rem;line-height:12rem;">50</span>
+      <span id="score--1" class="col-md-4 col-md-offset-4 text-shadowblack scorePlayer2"
+        style="height:12rem;line-height:12rem;">25</span>
     </div>
 
 
@@ -124,22 +128,19 @@
     <div class="row">
       <center>
 
-        <div class="col-md-4"><button class="btn btnpink btnhold">Hold!</button></div>
+        <div id="btn-hold--0" class="col-md-4"><button class="btn btnpink">Hold!</button></div>
 
       </center>
 
       <center>
-        <div class="col-md-4"> <button class="btn btnpink btnroll">🎲 擲出骰子</button></div>
+        <div class="col-md-4"> <button class="btn btnpink btn-roll">🎲 擲出骰子</button></div>
       </center>
 
       <div class="col-md-4">
 
-        <center><button class="btn btnpink btnhold">
-
-
+        <center><button id="btn-hold--1" class="btn btnpink">
 
             Hold！</button></center>
-
 
 
 
@@ -149,29 +150,23 @@
       <!-- 擲骰子畫面、當回合分數顯示 -->
       <div class="row text-center" style="height: 200px;">
 
-
-
-        <div class="col-md-4 box-shadow" style="font-weight: bold; font-size: large; height: 160px;">
+        <div class="col-md-4 box-shadow current-label activeplayer"
+          style="font-weight: bold; font-size: large; height: 160px;">
           <div>當回合分數</div>
 
-          <div class="h3 curScore2">0</div>
+          <div class="h3" id="current--0">10</div>
         </div>
 
+        <div class="col-md-4 box-shadow" style="height: 160px;">
 
-        <div class="col-md-4 box-shadow" style="height: 160px;"><img class="dice" src="dice-1.png" style="width: 30%; ">
-          <center>
-            <p style="margin-top: 50px;">create by <a href="https://github.com/qew4476">@State-yang</a></p>
-          </center>
+          <img class="dice hidden" src="dice-1.png" style="width: 30%; box-shadow: 5px 5px 5px black; ">
+
 
         </div>
 
+        <div class="col-md-4 box-shadow current-label" style="font-weight: bold; font-size: large; height: 160px;">當回合分數
 
-
-
-
-        <div class="col-md-4 box-shadow" style="font-weight: bold; font-size: large; height: 160px;">當回合分數
-
-          <div class="h3 curScore1">0</div>
+          <div class="h3" id="current--1">5</div>
         </div>
       </div>
 
