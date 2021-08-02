@@ -8,6 +8,8 @@ let activePlayer = 0;
 const score = [0, 0];
 const btnHoldArr = document.querySelectorAll('.btn-hold')
 let restPlayer = 1;
+const currentLabelArr = document.querySelectorAll('.current-label');
+const btnNew = document.getElementById('#btn-new');
 
 
 function currentPlus(current, diceNum) {
@@ -19,7 +21,7 @@ function currentPlus(current, diceNum) {
 
     //將current數字存到current--x展示出來
     document.getElementById(`current--${activePlayer}`).textContent = current;
-    console.log(`current--${activePlayer}`);
+
     return current;
 
 }
@@ -28,8 +30,7 @@ const switchPlayer = function () {
 
     document.getElementById(`current--${activePlayer}`).textContent = 0;
 
-    //把currentScore歸零
-    currentPlus(0, 0);
+    current = 0;
 
 
 
@@ -40,17 +41,25 @@ const switchPlayer = function () {
 
 }
 
+const UIselector = function () {
+
+    restPlayer = activePlayer === 0 ? 1 : 0;
+    btnHoldArr[restPlayer].disabled = true;
+    btnHoldArr[activePlayer].disabled = false;
+    currentLabelArr[restPlayer].style.opacity = '0.3';
+    currentLabelArr[activePlayer].style.opacity = '1';
+
+
+
+}
+
+
+
 //Roll the dice
 btnRoll.addEventListener('click', function () {
 
-    restPlayer = activePlayer === 0 ? 1 : 0;
 
-    // if (!btnHoldArr[restPlayer].contains('disabled'))
-    btnHoldArr[restPlayer].classList.add('disabled');
-    btnHoldArr[activePlayer].classList.remove('disabled');
-
-
-
+    UIselector();
 
 
     //show the diceImg
@@ -71,11 +80,8 @@ btnRoll.addEventListener('click', function () {
     } else {
 
 
-
-
         current = switchPlayer();
         //換人玩
-
 
 
     }
@@ -83,6 +89,38 @@ btnRoll.addEventListener('click', function () {
 
 
 
-
 })
+
+//按下btnHold
+for (let i = 0; i < btnHoldArr.length; i++)
+    btnHoldArr[i].addEventListener('click', function () {
+
+
+        score[i] += current;
+        document.getElementById(`score--${i}`).textContent = score[i];
+
+        //判斷勝利
+        if (score[i] >= 100) {
+
+            document.getElementById(`score--${i}`).textContent = "勝利！！";
+
+
+        }
+
+
+        console.log(activePlayer);
+        switchPlayer();
+
+        UIselector();
+
+
+
+
+
+
+    })
+
+
+
+
 
