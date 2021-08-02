@@ -5,11 +5,12 @@ const btnRoll = document.querySelector('.btn-roll');
 const diceEl = document.querySelector('.dice');
 let current = 0;
 let activePlayer = 0;
-const score = [0, 0];
+const score = [99, 0];
 const btnHoldArr = document.querySelectorAll('.btn-hold')
 let restPlayer = 1;
 const currentLabelArr = document.querySelectorAll('.current-label');
-const btnNew = document.getElementById('#btn-new');
+const btnNew = document.getElementById('btn-new');
+const winNum = [0, 0];
 
 
 function currentPlus(current, diceNum) {
@@ -82,6 +83,7 @@ btnRoll.addEventListener('click', function () {
 
         current = switchPlayer();
         //換人玩
+        UIselector();
 
 
     }
@@ -97,21 +99,31 @@ for (let i = 0; i < btnHoldArr.length; i++)
 
 
         score[i] += current;
+
         document.getElementById(`score--${i}`).textContent = score[i];
-
-        //判斷勝利
-        if (score[i] >= 100) {
-
-            document.getElementById(`score--${i}`).textContent = "勝利！！";
-
-
-        }
-
 
         console.log(activePlayer);
         switchPlayer();
 
         UIselector();
+
+
+
+        //判斷勝利
+        if (score[i] >= 100) {
+            //顯示勝利訊息
+            document.getElementById(`score--${i}`).textContent = "勝利！！";
+            //Disabled所有按鍵
+            btnHoldArr[0].disabled = true;
+            btnHoldArr[1].disabled = true;
+            btnRoll.disabled = true;
+            winNum[i]++;
+            document.getElementById(`win--${i}`).textContent = winNum[i];
+
+        }
+
+
+
 
 
 
@@ -122,5 +134,19 @@ for (let i = 0; i < btnHoldArr.length; i++)
 
 
 
+//重新開始！
+btnNew.addEventListener('click', function () {
+    activePlayer = 0;
+    score[0] = 0;
+    score[1] = 0;
+    current = 0;
+    btnHoldArr[0].disabled = false;
+    btnRoll.disabled = false;
+    document.getElementById('score--0').textContent = 0;
+    document.getElementById('score--1').textContent = 0;
+    document.getElementById('current--0').textContent = 0;
+    document.getElementById('current--1').textContent = 0;
+    UIselector();
 
 
+})
